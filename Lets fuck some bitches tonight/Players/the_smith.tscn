@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://hcos2iqifxrd"]
+[gd_scene load_steps=4 format=3 uid="uid://hcos2iqifxrd"]
+
+[ext_resource type="Script" path="res://Scripts/Player/the_smith.gd" id="1_nk0ea"]
+[ext_resource type="Texture2D" uid="uid://b018qvup27u2m" path="res://Graphics/steam happy.png" id="2_7d0d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4w52"]
 
-[node name="The Smith" type="Node2D"]
+[node name="The Smith" type="CharacterBody2D"]
+script = ExtResource("1_nk0ea")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="bob" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="bob" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_e4w52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -98)
+texture = ExtResource("2_7d0d2")

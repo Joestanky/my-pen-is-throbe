@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxu344i4c7tbe"]
+
+[ext_resource type="PackedScene" uid="uid://hcos2iqifxrd" path="res://Players/the_smith.tscn" id="1_52l11"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiemc"]
+size = Vector2(1153, 20)
+
+[node name="Level" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(28, 633)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(541.5, 0)
+shape = SubResource("RectangleShape2D_hiemc")
+
+[node name="The Smith" parent="." instance=ExtResource("1_52l11")]
